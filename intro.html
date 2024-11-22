@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La Cúpula - Restaurante de Alta Cocina Colombiana y Ancestral">
+    <title>La Cúpula - Restaurante de Alta Cocina Colombiana</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1f1f1f;
+            color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 3em;
+            font-weight: 700;
+            color: #ff6f61;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: #f0f0f0;
+            font-size: 1.2em;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff6f61;
+        }
+
+        .hero {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('restaurant-hero.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 150px 0;
+        }
+
+        .hero h2 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.6em;
+            margin-bottom: 30px;
+        }
+
+        .hero .btn {
+            padding: 15px 30px;
+            background-color: #ff6f61;
+            color: white;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background-color: #d35749;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        #menu .menu-items {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .menu-item {
+            background-color: #2c2c2c;
+            border-radius: 8px;
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .menu-item h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #ff6f61;
+        }
+
+        .menu-item p {
+            font-size: 1.2em;
+            color: #ccc;
+        }
+
+        #about {
+            background-color: #292929;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            font-size: 1.3em;
+            margin-bottom: 50px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        #gallery .gallery-images {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        #gallery .gallery-images img {
+            width: 30%;
+            border-radius: 8px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        #contact {
+            background-color: #333;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        #contact form {
+            display: grid;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #contact input, #contact textarea {
+            padding: 15px;
+            font-size: 1.2em;
+            border: 2px solid #444;
+            border-radius: 5px;
+            background-color: #222;
+            color: #fff;
+        }
+
+        #contact input:focus, #contact textarea:focus {
+            outline: none;
+            border-color: #ff6f61;
+        }
+
+        #contact button {
+            padding: 15px;
+            background-color: #ff6f61;
+            color: white;
+            font-size: 1.3em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #contact button:hover {
+            background-color: #d35749;
+        }
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Responsividad */
+        @media screen and (max-width: 768px) {
+            .menu-items {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu-item {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            #gallery .gallery-images {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h2 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">La Cúpula</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="#about">Sobre Nosotros</a></li>
+                    <li><a href="#gallery">Galería</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <h2>Bienvenidos a La Cúpula</h2>
+            <p>Disfruta de la mejor alta cocina colombiana ancestral, en un ambiente único.</p>
+            <a href="#menu" class="btn">Ver Menú</a>
+        </div>
+    </section>
+
+    <section id="menu">
+        <div class="container">
+            <h2>Menú Exclusivo</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3>Entrada: Arepa de Choclo</h3>
+                    <p>Una deliciosa arepa rellena de queso fresco, acompañada de salsa de guacamole.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Plato Principal: Ajiaco Santafereño</h3>
+                    <p>Un plato tradicional con pollo, papas criollas, y un toque de guasca.</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Postre: Tres Leches</h3>
+                    <p>Un pastel esponjoso con leche condensada, evaporada y crema de leche.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+            <p>La Cúpula es un restaurante que fusiona lo mejor de la alta cocina colombiana ancestral con técnicas modernas. Ubicado en un lugar emblemático, ofrecemos una experiencia gastronómica que revive los sabores tradicionales de Colombia en cada plato. Nuestro compromiso es honrar las raíces colombianas con un toque contemporáneo y creativo.</p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container">
+            <h2>Galería</h2>
+            <div class="gallery-images">
+                <img src="image1.jpg" alt="Plato típico colombiano">
+                <img src="image2.jpg" alt="Restaurante La Cúpula">
+                <img src="image3.jpg" alt="Plato gourmet colombiano">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>Estamos ubicados en el corazón de Bogotá. Para reservas o más información, contáctanos.</p>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 La Cúpula. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
